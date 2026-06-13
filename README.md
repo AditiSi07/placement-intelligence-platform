@@ -24,4 +24,4 @@ An AI-powered platform that helps engineering students prepare for campus placem
 See docs/setup-guide.md
 
 ## Developer
-[Your Name] — [Your College] — [Year]
+Aditi Singh — VIT Bhopal 
