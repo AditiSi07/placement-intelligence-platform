@@ -1,16 +1,26 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from dotenv import load_dotenv
-import os
-
-load_dotenv()
+from app.config import settings
+from app.routes import health, users, resume
 
 app = FastAPI(
     title="Placement Intelligence Platform API",
-    description="Backend API for the student placement platform",
-    version="1.0.0"
+    description="""
+    Backend API for the AI-powered student placement preparation platform.
+    
+    ## Features
+    * Resume upload and ATS scoring
+    * Skill gap analysis  
+    * Placement history analytics
+    * AI personalised roadmap generation
+    * AI mock interview sessions
+    """,
+    version="1.0.0",
+    docs_url="/docs",
+    redoc_url="/redoc"
 )
 
+# CORS — allows your Next.js frontend to call this backend
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:3000"],
@@ -19,10 +29,16 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.get("/")
-def root():
-    return {"message": "Placement Intelligence Platform API is running"}
+# Register all route files
+app.include_router(health.router)
+app.include_router(users.router, prefix="/api")
+app.include_router(resume.router, prefix="/api")
 
-@app.get("/health")
-def health_check():
-    return {"status": "healthy", "environment": os.getenv("ENVIRONMENT", "development")}
+# This runs when you start the server
+@app.on_event("startup")
+async def startup_event():
+    print("=" * 50)
+    print("Placement Intelligence Platform API started")
+    print(f"Environment: {settings.ENVIRONMENT}")
+    print("Docs available at: http://localhost:8000/docs")
+    print("=" * 50)

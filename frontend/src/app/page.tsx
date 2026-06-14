@@ -1,8 +1,11 @@
+
+
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
 export default function HomePage() {
+  
   return (
     <main className="min-h-screen bg-white">
       {/* Navbar */}
