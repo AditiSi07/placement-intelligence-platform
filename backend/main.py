@@ -20,7 +20,6 @@ app = FastAPI(
     redoc_url="/redoc"
 )
 
-# CORS — allows your Next.js frontend to call this backend
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:3000"],
@@ -29,12 +28,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Register all route files
 app.include_router(health.router)
 app.include_router(users.router, prefix="/api")
 app.include_router(resume.router, prefix="/api")
 
-# This runs when you start the server
 @app.on_event("startup")
 async def startup_event():
     print("=" * 50)
