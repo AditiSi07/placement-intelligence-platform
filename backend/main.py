@@ -7,7 +7,6 @@ app = FastAPI(
     title="Placement Intelligence Platform API",
     description="""
     Backend API for the AI-powered student placement preparation platform.
-    
     ## Features
     * Resume upload and ATS scoring
     * Skill gap analysis  
@@ -35,6 +34,7 @@ app.include_router(resume.router, prefix="/api")
 @app.on_event("startup")
 async def startup_event():
     from app.database import Base, engine
+    from app.models import user, resume as resume_model
     Base.metadata.create_all(bind=engine)
     print("=" * 50)
     print("Placement Intelligence Platform API started")

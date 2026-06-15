@@ -4,14 +4,15 @@ import { UserButton } from "@clerk/nextjs";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-
+import Link from "next/link";
 const features = [
   {
     title: "Resume Scorer",
     description: "Upload your resume and get an ATS compatibility score",
-    status: "Coming Week 3",
+    status: "Live ✓",
     icon: "📄",
-    available: false,
+    href: "/dashboard/resume",
+    available: true,       // ← change to true
   },
   {
     title: "Skill Gap Analyser",
@@ -122,12 +123,18 @@ export default function DashboardClient({ userName, userEmail, userInitials }: P
                   </Badge>
                 </div>
               </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-500 mb-4">{f.description}</p>
-                <Button variant="outline" size="sm" className="w-full" disabled>
-                  Open
-                </Button>
-              </CardContent>
+                <CardContent>
+                    <p className="text-sm text-gray-500 mb-4">{f.description}</p>
+                   {f.available ? (
+                      <Link href={f.href}>
+                             <Button size="sm" className="w-full">Open →</Button>
+                      </Link>
+                   ) : (
+                       <Button variant="outline" size="sm" className="w-full" disabled>
+                             {f.status}
+                        </Button>
+                     )}
+                </CardContent>
             </Card>
           ))}
         </div>
