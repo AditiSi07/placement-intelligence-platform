@@ -74,7 +74,7 @@ export default function DashboardClient({ userName, userEmail, userInitials }: P
         {/* Welcome header */}
         <div className="mb-8">
           <h1 className="text-2xl font-bold text-gray-900">
-            Welcome back, {userName}! 👋
+            Welcome back, {userName === "Student" ? userEmail.split("@")[0] : userName}! 👋
           </h1>
           <p className="text-gray-500 mt-1">
             Track your placement preparation progress
