@@ -1,11 +1,12 @@
-
-
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { auth } from "@clerk/nextjs/server";
 
-export default function HomePage() {
-  
+export default async function HomePage() {
+  const { userId } = await auth();
+  const isLoggedIn = !!userId;
+
   return (
     <main className="min-h-screen bg-white">
       {/* Navbar */}
@@ -17,12 +18,20 @@ export default function HomePage() {
           <span className="font-semibold text-gray-900">PlacementIQ</span>
         </div>
         <div className="flex items-center gap-3">
-          <Link href="/sign-in">
-            <Button variant="ghost" size="sm">Sign in</Button>
-          </Link>
-          <Link href="/sign-up">
-            <Button size="sm">Get started free</Button>
-          </Link>
+          {isLoggedIn ? (
+            <Link href="/dashboard">
+              <Button size="sm">Go to dashboard →</Button>
+            </Link>
+          ) : (
+            <>
+              <Link href="/sign-in">
+                <Button variant="ghost" size="sm">Sign in</Button>
+              </Link>
+              <Link href="/sign-up">
+                <Button size="sm">Get started free</Button>
+              </Link>
+            </>
+          )}
         </div>
       </nav>
 
@@ -41,14 +50,10 @@ export default function HomePage() {
         </p>
         <div className="flex items-center justify-center gap-4">
           <Link href="/sign-up">
-            <Button size="lg" className="px-8">
-              Start for free
-            </Button>
+            <Button size="lg" className="px-8">Start for free</Button>
           </Link>
           <Link href="/dashboard">
-            <Button size="lg" variant="outline" className="px-8">
-              View demo
-            </Button>
+            <Button size="lg" variant="outline" className="px-8">View demo</Button>
           </Link>
         </div>
       </section>
@@ -87,3 +92,4 @@ export default function HomePage() {
     </main>
   );
 }
+

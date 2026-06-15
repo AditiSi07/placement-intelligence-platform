@@ -34,6 +34,8 @@ app.include_router(resume.router, prefix="/api")
 
 @app.on_event("startup")
 async def startup_event():
+    from app.database import Base, engine
+    Base.metadata.create_all(bind=engine)
     print("=" * 50)
     print("Placement Intelligence Platform API started")
     print(f"Environment: {settings.ENVIRONMENT}")

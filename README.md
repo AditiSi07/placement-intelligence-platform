@@ -280,7 +280,7 @@ Full API documentation: http://localhost:8000/docs
 
 **[Aditi Singh]**  
 3rd Year B.Tech — [Computer Science] — [VIT Bhopal]  
-[Your LinkedIn URL] | [Your GitHub URL] | [Your Email]
+[www.linkedin.com/in/aditisingh07102007] | [https://github.com/AditiSi07] | [aditiajit4@gmail.com]
 
 ---
 
