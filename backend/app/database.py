@@ -5,21 +5,21 @@ from app.config import settings
 
 DATABASE_URL = settings.DATABASE_URL
 
-# If no real DB is set yet, fall back to SQLite so app doesn't crash
 if "your_supabase" in DATABASE_URL or "not_set" in DATABASE_URL:
     DATABASE_URL = "sqlite:///./test.db"
     engine = create_engine(
         DATABASE_URL,
         connect_args={"check_same_thread": False}
     )
-    print("WARNING: Using local SQLite. Set DATABASE_URL in .env to use Supabase.")
+    print("WARNING: Using local SQLite.")
 else:
     engine = create_engine(
         DATABASE_URL,
-        pool_size=5,
-        max_overflow=10,
+        pool_size=3,
+        max_overflow=5,
         pool_timeout=30,
-        pool_recycle=1800,
+        pool_recycle=300,        # recycle connections every 5 minutes
+        pool_pre_ping=True,      # test connection before using it
     )
     print("Connected to Supabase PostgreSQL database.")
 
@@ -34,7 +34,6 @@ def get_db():
         db.close()
 
 def test_connection():
-    """Call this to verify database connection is working."""
     try:
         with engine.connect() as conn:
             conn.execute(text("SELECT 1"))

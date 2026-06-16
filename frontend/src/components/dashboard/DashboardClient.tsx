@@ -12,20 +12,22 @@ const features = [
     status: "Live ✓",
     icon: "📄",
     href: "/dashboard/resume",
-    available: true,       // ← change to true
+    available: true,
   },
   {
     title: "Skill Gap Analyser",
     description: "Compare your skills against any job description",
-    status: "Coming Week 4",
+    status: "Live ✓",
     icon: "🎯",
-    available: false,
+    href: "/dashboard/gap-analysis",
+    available: true,       // ← change to true
   },
   {
     title: "Placement Analytics",
     description: "Browse company-wise placement history from your college",
     status: "Coming Week 5",
     icon: "📊",
+    href: "/dashboard/analytics",
     available: false,
   },
   {
@@ -33,6 +35,7 @@ const features = [
     description: "Get a personalised week-by-week learning plan",
     status: "Coming Week 6",
     icon: "🗺️",
+    href: "/dashboard/roadmap",
     available: false,
   },
   {
@@ -40,6 +43,7 @@ const features = [
     description: "Practice with an AI interviewer and get feedback",
     status: "Coming Week 7",
     icon: "🤖",
+    href: "/dashboard/interview",
     available: false,
   },
 ];

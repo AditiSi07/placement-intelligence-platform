@@ -44,17 +44,22 @@ export default function ResumePage() {
     try {
       const formData = new FormData();
       formData.append("file", file);
-
-      const response = await axios.post(
-        "http://localhost:8000/api/resume/upload",
-        formData,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-            "clerk-user-id": user?.id || "",
-          },
+      if (!user?.id) {
+        toast.error("Please sign in first");
+        return;
         }
-      );
+      console.log("Uploading for user:", user.id);  // check this in browser console
+      const response = await axios.post(
+          "http://localhost:8000/api/resume/upload",
+           formData,
+            {
+                headers: {
+                    "Content-Type": "multipart/form-data",
+                    "clerk-user-id": user?.id || "",
+                    "clerk-user-email": user?.primaryEmailAddress?.emailAddress || "",
+                    },
+             }
+          );
 
       setAnalysis(response.data.analysis);
       toast.success("Resume analysed successfully!");

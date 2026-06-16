@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.config import settings
-from app.routes import health, users, resume
+from app.routes import health, users, resume, gap_analysis
 
 app = FastAPI(
     title="Placement Intelligence Platform API",
@@ -9,7 +9,7 @@ app = FastAPI(
     Backend API for the AI-powered student placement preparation platform.
     ## Features
     * Resume upload and ATS scoring
-    * Skill gap analysis  
+    * Skill gap analysis
     * Placement history analytics
     * AI personalised roadmap generation
     * AI mock interview sessions
@@ -30,11 +30,12 @@ app.add_middleware(
 app.include_router(health.router)
 app.include_router(users.router, prefix="/api")
 app.include_router(resume.router, prefix="/api")
+app.include_router(gap_analysis.router, prefix="/api")
 
 @app.on_event("startup")
 async def startup_event():
     from app.database import Base, engine
-    from app.models import user, resume as resume_model
+    from app.models import user, resume as resume_model, gap_analysis as gap_model
     Base.metadata.create_all(bind=engine)
     print("=" * 50)
     print("Placement Intelligence Platform API started")
