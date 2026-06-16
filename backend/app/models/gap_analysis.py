@@ -1,12 +1,14 @@
 from sqlalchemy import Column, String, Integer, DateTime, Text
-from sqlalchemy.dialects.postgresql import JSONB, ARRAY
+from sqlalchemy.dialects.postgresql import JSONB, ARRAY, UUID
 from sqlalchemy.sql import func
 from app.database import Base
+import uuid
 
 class GapAnalysis(Base):
     __tablename__ = "gap_analyses"
+    __table_args__ = {"extend_existing": True}
 
-    id = Column(String, primary_key=True)
+    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
     user_id = Column(String, nullable=False, index=True)
     resume_id = Column(String, nullable=True)
     job_id = Column(String, nullable=True)

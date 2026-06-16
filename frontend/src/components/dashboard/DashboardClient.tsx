@@ -25,10 +25,10 @@ const features = [
   {
     title: "Placement Analytics",
     description: "Browse company-wise placement history from your college",
-    status: "Coming Week 5",
+    status: "Live ✓",
     icon: "📊",
     href: "/dashboard/analytics",
-    available: false,
+    available: true,
   },
   {
     title: "AI Roadmap",

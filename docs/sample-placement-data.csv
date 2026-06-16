@@ -1,0 +1,21 @@
+company_name,job_title,package_lpa,placement_year,branch,eligible_branches,min_cgpa,bond_years,job_type,sector,skills_tested,selection_process,students_placed,college
+Google,Software Engineer,45.0,2024,CSE,"CSE,IT,AIDS",7.5,0,fulltime,IT,"DSA,System Design,Python","aptitude,coding,technical,hr",3,VIT Bhopal
+Microsoft,Software Engineer,40.0,2024,CSE,"CSE,IT,AIDS",7.0,0,fulltime,IT,"DSA,C++,System Design","aptitude,coding,technical,hr",5,VIT Bhopal
+Amazon,SDE-1,32.0,2024,CSE,"CSE,IT,ECE,AIDS",6.5,0,fulltime,IT,"DSA,Java,OS,DBMS","aptitude,coding,technical,hr",8,VIT Bhopal
+Infosys,Systems Engineer,6.5,2024,CSE,"CSE,IT,ECE,EEE,MECH",6.0,2,fulltime,IT,"Aptitude,Verbal,Coding","aptitude,technical,hr",45,VIT Bhopal
+TCS,Software Developer,7.0,2024,CSE,"CSE,IT,ECE,EEE,MECH,CIVIL",6.0,2,fulltime,IT,"Aptitude,Verbal,Coding","aptitude,technical,hr",60,VIT Bhopal
+Wipro,Project Engineer,6.5,2024,CSE,"CSE,IT,ECE,EEE",6.0,1,fulltime,IT,"Aptitude,Communication","aptitude,technical,hr",40,VIT Bhopal
+Cognizant,Programmer Analyst,7.5,2024,CSE,"CSE,IT,ECE",6.5,1,fulltime,IT,"Aptitude,Coding,SQL","aptitude,technical,hr",35,VIT Bhopal
+Zerodha,Software Engineer,18.0,2024,CSE,"CSE,IT",7.0,0,fulltime,Finance,"Python,SQL,Django,React","coding,technical,hr",2,VIT Bhopal
+Razorpay,Software Engineer,20.0,2024,CSE,"CSE,IT,AIDS",7.5,0,fulltime,Fintech,"DSA,System Design,Node.js","coding,technical,hr",2,VIT Bhopal
+Swiggy,Software Engineer,22.0,2024,CSE,"CSE,IT,AIDS",7.0,0,fulltime,IT,"DSA,System Design,SQL","aptitude,coding,technical,hr",4,VIT Bhopal
+DRDO,Scientist B,10.0,2024,ECE,"ECE,EEE",7.5,5,fulltime,Core,"Electronics,Signal Processing","written,technical,interview",2,VIT Bhopal
+L&T,Graduate Engineer,8.5,2024,MECH,"MECH,CIVIL,EEE",6.5,2,fulltime,Core,"Engineering Drawing,Thermodynamics","aptitude,technical,hr",10,VIT Bhopal
+Deloitte,Analyst,9.5,2024,CSE,"CSE,IT,ECE,AIDS",6.5,0,fulltime,Consulting,"Aptitude,Communication,Excel","aptitude,case study,hr",15,VIT Bhopal
+Goldman Sachs,Analyst,25.0,2024,CSE,"CSE,IT,AIDS",8.0,0,fulltime,Finance,"DSA,Python,Probability","aptitude,coding,technical,hr",3,VIT Bhopal
+Adobe,MTS,28.0,2024,CSE,"CSE,IT,AIDS",7.5,0,fulltime,IT,"DSA,System Design,C++","aptitude,coding,technical,hr",2,VIT Bhopal
+Accenture,Associate,8.0,2024,CSE,"CSE,IT,ECE,EEE,MECH",6.0,1,fulltime,IT,"Aptitude,Communication","aptitude,technical,hr",50,VIT Bhopal
+Capgemini,Analyst,7.5,2024,CSE,"CSE,IT,ECE",6.0,1,fulltime,IT,"Aptitude,Coding","aptitude,technical,hr",38,VIT Bhopal
+Bajaj Finserv,Software Engineer,12.0,2024,CSE,"CSE,IT,AIDS",6.5,0,fulltime,Finance,"Python,SQL,DSA","coding,technical,hr",5,VIT Bhopal
+ISRO,Scientist,9.0,2024,ECE,"ECE,EEE,MECH",7.5,5,fulltime,Core,"Electronics,VLSI,Embedded","written,technical,interview",1,VIT Bhopal
+PhonePe,Software Engineer,24.0,2024,CSE,"CSE,IT,AIDS",7.5,0,fulltime,Fintech,"DSA,System Design,Java","coding,technical,hr",3,VIT Bhopal
