@@ -41,10 +41,10 @@ const features = [
   {
     title: "Mock Interview",
     description: "Practice with an AI interviewer and get feedback",
-    status: "Coming Week 7",
+    status: "Live ✓",
     icon: "🤖",
     href: "/dashboard/interview",
-    available: false,
+    available: true,
   },
 ];
 
