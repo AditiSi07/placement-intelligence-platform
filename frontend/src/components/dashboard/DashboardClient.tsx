@@ -33,10 +33,10 @@ const features = [
   {
     title: "AI Roadmap",
     description: "Get a personalised week-by-week learning plan",
-    status: "Coming Week 6",
+    status: "Live ✓",
     icon: "🗺️",
     href: "/dashboard/roadmap",
-    available: false,
+    available: true,
   },
   {
     title: "Mock Interview",
