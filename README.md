@@ -2,8 +2,8 @@
 
 > Helping engineering students get placed at their dream companies using AI
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Coming%20Week%209-blue)](https://placementiq.vercel.app)
-[![Backend API](https://img.shields.io/badge/API%20Docs-Swagger-green)](https://placementiq-api.onrender.com/docs)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Click%20Here-blue)](https://placement-intelligence-platform-murex.vercel.app)
+[![Backend API](https://img.shields.io/badge/API%20Docs-Swagger-green)](https://placement-iq-api.onrender.com/docs)
 [![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
 [![Made with](https://img.shields.io/badge/Made%20with-Next.js%20%2B%20FastAPI-black)](https://github.com)
 
@@ -264,15 +264,15 @@ Full API documentation: https://placement-iq-api.onrender.com/docs
 ## Development Progress
 
 - [x] Week 1 — Project setup, database schema, architecture
-- [ ] Week 2 — Authentication with Clerk
-- [ ] Week 3 — Resume upload and ATS scorer
-- [ ] Week 4 — Skill gap analyser
-- [ ] Week 5 — Placement analytics dashboard
-- [ ] Week 6 — AI roadmap generator
-- [ ] Week 7 — AI mock interview module
-- [ ] Week 8 — Testing and mobile responsiveness
-- [ ] Week 9 — Deployment to Vercel + Render
-- [ ] Week 10 — Documentation and launch
+- [x] Week 2 — Authentication with Clerk
+- [x] Week 3 — Resume upload and ATS scorer
+- [x] Week 4 — Skill gap analyser
+- [x] Week 5 — Placement analytics dashboard
+- [x] Week 6 — AI roadmap generator
+- [x] Week 7 — AI mock interview module
+- [x] Week 8 — Testing and mobile responsiveness
+- [x] Week 9 — Deployment to Vercel + Render
+- [x] Week 10 — Documentation and launch
 
 ---
 

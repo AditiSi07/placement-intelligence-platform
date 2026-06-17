@@ -14,10 +14,9 @@ app = FastAPI(
 # Allow both local dev and production frontend
 origins = [
     "http://localhost:3000",
-    "https://placement-intelligence-platform.vercel.app",
+    "https://placement-intelligence-platform-murex.vercel.app",
     settings.ALLOWED_ORIGINS,
 ]
-
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
