@@ -37,7 +37,7 @@ export default function RoadmapPage() {
   const fetchHistory = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:8000/api/roadmap/history/${user?.id}`
+        `https://placement-iq-api.onrender.com/api/roadmap/history/${user?.id}`
       );
       setHistory(response.data.roadmaps);
     } catch (error) {
@@ -70,7 +70,7 @@ export default function RoadmapPage() {
         .filter(Boolean);
 
       const response = await axios.post(
-        "http://localhost:8000/api/roadmap/generate",
+        "https://placement-iq-api.onrender.com/api/roadmap/generate",
         {
           clerk_user_id: user?.id,
           target_company: form.target_company,

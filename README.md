@@ -147,8 +147,8 @@ cp .env.example .env
 
 uvicorn main:app --reload --port 8000
 ```
-→ API running at http://localhost:8000  
-→ API docs at http://localhost:8000/docs
+→ API running at https://placement-iq-api.onrender.com  
+→ API docs at https://placement-iq-api.onrender.com/docs
 
 ### 3. Frontend setup
 ```bash
@@ -190,7 +190,7 @@ NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_...
 
 CLERK_SECRET_KEY=sk_...
 
-NEXT_PUBLIC_API_URL=http://localhost:8000
+NEXT_PUBLIC_API_URL=https://placement-iq-api.onrender.com
 
 NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
 
@@ -257,7 +257,7 @@ placement-intelligence-platform/
 | POST | `/api/roadmap/generate` | Generate AI roadmap |
 | POST | `/api/interview/start` | Start mock interview |
 
-Full API documentation: http://localhost:8000/docs
+Full API documentation: https://placement-iq-api.onrender.com/docs
 
 ---
 

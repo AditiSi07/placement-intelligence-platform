@@ -50,7 +50,7 @@ export default function ResumePage() {
         }
       console.log("Uploading for user:", user.id);  // check this in browser console
       const response = await axios.post(
-          "http://localhost:8000/api/resume/upload",
+          "https://placement-iq-api.onrender.com/api/resume/upload",
            formData,
             {
                 headers: {

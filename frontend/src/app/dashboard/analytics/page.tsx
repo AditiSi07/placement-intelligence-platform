@@ -65,7 +65,7 @@ export default function AnalyticsPage() {
       if (customFilters.min_package) params.append("min_package", customFilters.min_package);
 
       const response = await axios.get(
-        `http://localhost:8000/api/placement/companies?${params.toString()}`
+        `https://placement-iq-api.onrender.com/api/placement/companies?${params.toString()}`
       );
       setCompanies(response.data.companies);
     } catch (error) {
@@ -77,7 +77,7 @@ export default function AnalyticsPage() {
 
   const fetchAnalytics = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/api/placement/analytics");
+      const response = await axios.get("https://placement-iq-api.onrender.com/api/placement/analytics");
       setAnalytics(response.data.analytics);
     } catch (error) {
       console.error("Analytics fetch failed");
@@ -87,7 +87,7 @@ export default function AnalyticsPage() {
   const fetchEligible = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:8000/api/placement/eligible/${user?.id}`
+        `https://placement-iq-api.onrender.com/api/placement/eligible/${user?.id}`
       );
       setEligibleCompanies(response.data.companies);
     } catch (error) {
@@ -105,7 +105,7 @@ export default function AnalyticsPage() {
 
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/placement/upload-csv",
+        "https://placement-iq-api.onrender.com/api/placement/upload-csv",
         formData,
         {
           headers: {

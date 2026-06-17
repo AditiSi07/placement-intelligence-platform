@@ -37,8 +37,8 @@ cp .env.example .env
 uvicorn main:app --reload --port 8000
 ```
 
-Backend runs at: http://localhost:8000
-API docs at: http://localhost:8000/docs
+Backend runs at: https://placement-iq-api.onrender.com
+API docs at: https://placement-iq-api.onrender.com/docs
 
 ## Frontend setup
 

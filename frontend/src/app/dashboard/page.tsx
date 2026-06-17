@@ -5,7 +5,7 @@ import axios from "axios";
 
 async function getUserStats(userId: string) {
   try {
-    const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+    const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://placement-iq-api.onrender.com";
 
     const [resumeRes, interviewRes] = await Promise.allSettled([
       axios.get(`${API_URL}/api/resume/latest/${userId}`),

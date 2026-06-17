@@ -67,7 +67,7 @@ export default function InterviewPage() {
         .filter(Boolean);
 
       const response = await axios.post(
-        "http://localhost:8000/api/interview/start",
+        "https://placement-iq-api.onrender.com/api/interview/start",
         {
           clerk_user_id: user?.id,
           target_company: config.target_company,
@@ -104,7 +104,7 @@ export default function InterviewPage() {
     try {
       // Evaluate answer
       const evalResponse = await axios.post(
-        "http://localhost:8000/api/interview/answer",
+        "https://placement-iq-api.onrender.com/api/interview/answer",
         {
           interview_id: interviewId,
           question: currentQuestion,
@@ -141,7 +141,7 @@ export default function InterviewPage() {
 
       // Get next question
       const nextResponse = await axios.post(
-        "http://localhost:8000/api/interview/next-question",
+        "https://placement-iq-api.onrender.com/api/interview/next-question",
         {
           interview_id: interviewId,
           target_company: config.target_company,
@@ -171,7 +171,7 @@ export default function InterviewPage() {
   const handleEndInterview = async (finalTranscript: QA[]) => {
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/interview/end",
+        "https://placement-iq-api.onrender.com/api/interview/end",
         {
           interview_id: interviewId,
           clerk_user_id: user?.id,

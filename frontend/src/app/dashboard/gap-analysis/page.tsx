@@ -43,7 +43,7 @@ export default function GapAnalysisPage() {
   const fetchLatestResume = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:8000/api/resume/latest/${user?.id}`
+        `https://placement-iq-api.onrender.com/api/resume/latest/${user?.id}`
       );
       if (response.data.resume) {
         setResumeText(response.data.resume.parsed_text || "");
@@ -67,7 +67,7 @@ export default function GapAnalysisPage() {
     setLoading(true);
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/gap-analysis/analyse",
+        "https://placement-iq-api.onrender.com/api/gap-analysis/analyse",
         {
           resume_text: resumeText,
           job_description: jobDescription,
