@@ -5,23 +5,22 @@ from app.routes import health, users, resume, gap_analysis, placement, roadmap, 
 
 app = FastAPI(
     title="Placement Intelligence Platform API",
-    description="""
-    Backend API for the AI-powered student placement preparation platform.
-    ## Features
-    * Resume upload and ATS scoring
-    * Skill gap analysis
-    * Placement history analytics
-    * AI personalised roadmap generation
-    * AI mock interview sessions
-    """,
+    description="Backend API for the AI-powered student placement preparation platform.",
     version="1.0.0",
     docs_url="/docs",
     redoc_url="/redoc"
 )
 
+# Allow both local dev and production frontend
+origins = [
+    "http://localhost:3000",
+    "https://placement-intelligence-platform.vercel.app",
+    settings.ALLOWED_ORIGINS,
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -47,5 +46,5 @@ async def startup_event():
     print("=" * 50)
     print("Placement Intelligence Platform API started")
     print(f"Environment: {settings.ENVIRONMENT}")
-    print("Docs available at: http://localhost:8000/docs")
+    print("Docs available at: /docs")
     print("=" * 50)
