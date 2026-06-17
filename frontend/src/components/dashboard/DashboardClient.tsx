@@ -77,7 +77,7 @@ export default function DashboardClient({ userName, userEmail, userInitials, res
           <span className="text-sm text-gray-500 hidden md:block truncate max-w-48">
             {userEmail}
           </span>
-          <UserButton afterSignOutUrl="/" />
+          <UserButton />
         </div>
       </div>
 
