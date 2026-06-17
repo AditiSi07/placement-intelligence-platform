@@ -17,9 +17,11 @@ interface Company {
   eligible_branches: string[];
   min_cgpa: number;
   bond_years: number;
+  job_type: string;
   skills_tested: string[];
   selection_process: string[];
   students_placed: number;
+  college?: string;
 }
 
 interface Analytics {
